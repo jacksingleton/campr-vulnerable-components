@@ -1,0 +1,8 @@
+target/
+*.ipr
+*.iml
+*.iws
+build/
+target/
+.classpath
+.gradle/
