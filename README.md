@@ -1,4 +1,21 @@
-spring-petclinic
-================
+# Campr Vulnerable Components Workshop
 
-sample application for the Spring framework
+## Getting started
+
+Generate Intellij project files:
+
+```bash
+mvn idea:idea
+```
+
+Run the application
+
+```bash
+mvn jetty:run
+```
+
+## Requirements
+
+* JDK 1.7+
+* A Java IDE
+* maven (`brew install maven`)
