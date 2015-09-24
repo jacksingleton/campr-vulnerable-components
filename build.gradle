@@ -1,0 +1,71 @@
+buildscript {
+  repositories {
+    jcenter()
+  }
+
+  dependencies {
+    classpath 'org.akhikhl.gretty:gretty:+'
+  }
+}
+
+repositories {
+  jcenter()
+}
+
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'war'
+apply plugin: 'org.akhikhl.gretty'
+
+group = 'org.springframework.samples'
+version = '1.0.0-SNAPSHOT'
+
+description = """petclinic"""
+
+sourceCompatibility = 1.5
+targetCompatibility = 1.5
+
+repositories {
+     maven { url "https://repo1.maven.org/maven2" }
+     maven { url "http://repository.springsource.com/maven/bundles/release" }
+     maven { url "http://repository.springsource.com/maven/bundles/milestone" }
+     maven { url "http://repository.springsource.com/maven/bundles/external" }
+     maven { url "http://repository.springsource.com/maven/bundles/snapshot" }
+     maven { url "http://maven.springframework.org/release" }
+     maven { url "http://maven.springframework.org/external" }
+     maven { url "http://maven.springframework.org/milestone" }
+}
+
+dependencies {
+    compile group: 'com.oracle.toplink.essentials', name: 'com.springsource.oracle.toplink.essentials', version:'2.0.0.b41-beta2'
+    compile group: 'com.sun.syndication', name: 'com.springsource.com.sun.syndication', version:'1.0.0'
+    compile group: 'javax.persistence', name: 'com.springsource.javax.persistence', version:'1.0.0'
+    compile group: 'org.apache.commons', name: 'com.springsource.org.apache.commons.dbcp', version:'1.2.2.osgi'
+    compile group: 'org.apache.log4j', name: 'com.springsource.org.apache.log4j', version:'1.2.15'
+    compile group: 'org.apache.openjpa', name: 'com.springsource.org.apache.openjpa', version:'1.1.0'
+    compile group: 'org.aspectj', name: 'com.springsource.org.aspectj.weaver', version:'1.7.2.RELEASE'
+    compile group: 'org.hibernate', name: 'com.springsource.org.hibernate', version:'3.3.1.GA'
+    compile group: 'org.hibernate', name: 'com.springsource.org.hibernate.ejb', version:'3.4.0.GA'
+    compile group: 'org.hsqldb', name: 'com.springsource.org.hsqldb', version:'1.8.0.9'
+    compile group: 'org.jdom', name: 'com.springsource.org.jdom', version:'1.0.0'
+
+    compile group: 'org.springframework', name: 'org.springframework.asm', version:'3.0.4.RELEASE'
+    compile group: 'org.springframework', name: 'org.springframework.aspects', version:'3.0.4.RELEASE'
+    compile group: 'org.springframework', name: 'org.springframework.orm', version:'3.0.4.RELEASE'
+    compile group: 'org.springframework', name: 'org.springframework.oxm', version:'3.0.4.RELEASE'
+    compile group: 'org.springframework', name: 'org.springframework.web.servlet', version:'3.0.4.RELEASE'
+
+    compile group: 'org.slf4j', name: 'com.springsource.slf4j.org.apache.commons.logging', version:'1.5.6'
+    compile group: 'org.slf4j', name: 'com.springsource.slf4j.api', version:'1.5.6'
+    compile(group: 'org.slf4j', name: 'com.springsource.slf4j.log4j', version:'1.5.6') {
+      exclude(module: 'log4j')
+      exclude(module: 'com.springsource.org.apache.log4j')
+    }
+    testCompile group: 'org.junit', name: 'com.springsource.org.junit', version:'4.5.0'
+    testCompile group: 'org.springframework', name: 'org.springframework.test', version:'3.0.4.RELEASE'
+    testCompile group: 'javax.transaction', name: 'com.springsource.javax.transaction', version:'1.1.0'
+    testCompile group: 'org.hibernate', name: 'com.springsource.org.hibernate.annotations', version:'3.4.0.GA'
+
+    providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version:'3.1.0'
+    providedCompile group: 'javax.xml.bind', name: 'com.springsource.javax.xml.bind', version:'2.1.7'
+}
