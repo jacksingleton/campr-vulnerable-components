@@ -40,6 +40,7 @@ public class FindOwnersForm {
 
 	@RequestMapping(value = "/owners/search", method = RequestMethod.GET)
 	public String setupForm(Model model) {
+		model.addAttribute("ownerNotFound", false);
 		model.addAttribute("owner", new Owner());
 		return "owners/search";
 	}
