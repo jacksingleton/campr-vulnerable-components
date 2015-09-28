@@ -8,12 +8,12 @@ body,div,td {
 
 body {
 	background-color: #fff;
-	background-image: url(../images/banner-graphic.png);
-	background-position: top center;
-	background-repeat: no-repeat;
+	//background-image: url(../images/banner-graphic.png);
+	//background-position: top center;
+	//background-repeat: no-repeat;
 	text-align: center;
 	min-width: 600px;
-	margin-top: 60px;
+	//margin-top: 60px;
 	margin-left: auto;
 	margin-right: auto;
 }

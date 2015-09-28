@@ -40,7 +40,7 @@ public class ClinicController {
 	 */
 	@RequestMapping("/")
 	public String welcomeHandler() {
-		return "welcome";
+		return "redirect:/owners/search";
 	}
 
 	/**
