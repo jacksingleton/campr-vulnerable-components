@@ -5,17 +5,16 @@
 Generate Intellij project files:
 
 ```bash
-mvn idea:idea
+./gradlew idea
 ```
 
 Run the application
 
 ```bash
-mvn jetty:run
+./gradlew appRun
 ```
 
 ## Requirements
 
 * JDK 1.7+
 * A Java IDE
-* maven (`brew install maven`)
