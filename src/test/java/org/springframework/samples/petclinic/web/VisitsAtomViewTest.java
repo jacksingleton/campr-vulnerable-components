@@ -16,11 +16,7 @@
 
 package org.springframework.samples.petclinic.web;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import com.sun.syndication.feed.atom.Entry;
 import com.sun.syndication.feed.atom.Feed;
@@ -45,6 +41,7 @@ public class VisitsAtomViewTest {
 	private Feed feed;
 
 	@Before
+	@SuppressWarnings("deprecation")
 	public void setUp() {
 		visitView = new VisitsAtomView();
 		PetType dog = new PetType();
@@ -74,6 +71,7 @@ public class VisitsAtomViewTest {
 	}
 
 	@Test
+	@SuppressWarnings("deprecation")
 	public void buildFeedMetadata() {
 		visitView.buildFeedMetadata(model, feed, null);
 

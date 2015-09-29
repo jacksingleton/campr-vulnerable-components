@@ -5,9 +5,6 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 import org.springframework.samples.petclinic.hibernate.HibernateClinicTests;
 import org.springframework.samples.petclinic.jdbc.SimpleJdbcClinicTests;
-import org.springframework.samples.petclinic.jpa.EntityManagerClinicTests;
-import org.springframework.samples.petclinic.jpa.HibernateEntityManagerClinicTests;
-import org.springframework.samples.petclinic.jpa.OpenJpaEntityManagerClinicTests;
 import org.springframework.samples.petclinic.web.VisitsAtomViewTest;
 
 /**
@@ -20,9 +17,6 @@ import org.springframework.samples.petclinic.web.VisitsAtomViewTest;
 	OwnerTests.class,
 	SimpleJdbcClinicTests.class,
 	HibernateClinicTests.class,
-	EntityManagerClinicTests.class,
-	HibernateEntityManagerClinicTests.class,
-	OpenJpaEntityManagerClinicTests.class,
 	VisitsAtomViewTest.class
 })
 public class PetClinicTestSuite {
