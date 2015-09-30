@@ -25,7 +25,7 @@ description = """petclinic"""
 sourceCompatibility = 1.6
 targetCompatibility = 1.6
 
-def springVersion = '3.0.4.RELEASE'
+def springVersion = '3.1.0.RELEASE'
 
 repositories {
      maven { url "https://repo1.maven.org/maven2" }
