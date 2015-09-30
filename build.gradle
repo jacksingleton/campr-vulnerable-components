@@ -25,6 +25,8 @@ description = """petclinic"""
 sourceCompatibility = 1.6
 targetCompatibility = 1.6
 
+def springVersion = '3.0.4.RELEASE'
+
 repositories {
      maven { url "https://repo1.maven.org/maven2" }
      maven { url "http://repository.springsource.com/maven/bundles/release" }
@@ -49,11 +51,11 @@ dependencies {
     compile group: 'org.hsqldb', name: 'com.springsource.org.hsqldb', version:'1.8.0.9'
     compile group: 'org.jdom', name: 'com.springsource.org.jdom', version:'1.0.0'
 
-    compile group: 'org.springframework', name: 'org.springframework.asm', version:'3.0.4.RELEASE'
-    compile group: 'org.springframework', name: 'org.springframework.aspects', version:'3.0.4.RELEASE'
-    compile group: 'org.springframework', name: 'org.springframework.orm', version:'3.0.4.RELEASE'
-    compile group: 'org.springframework', name: 'org.springframework.oxm', version:'3.0.4.RELEASE'
-    compile group: 'org.springframework', name: 'org.springframework.web.servlet', version:'3.0.4.RELEASE'
+    compile group: 'org.springframework', name: 'org.springframework.asm', version: springVersion
+    compile group: 'org.springframework', name: 'org.springframework.aspects', version: springVersion
+    compile group: 'org.springframework', name: 'org.springframework.orm', version: springVersion
+    compile group: 'org.springframework', name: 'org.springframework.oxm', version: springVersion
+    compile group: 'org.springframework', name: 'org.springframework.web.servlet', version: springVersion
 
     compile group: 'org.slf4j', name: 'com.springsource.slf4j.org.apache.commons.logging', version:'1.5.6'
     compile group: 'org.slf4j', name: 'com.springsource.slf4j.api', version:'1.5.6'
@@ -62,7 +64,7 @@ dependencies {
       exclude(module: 'com.springsource.org.apache.log4j')
     }
     testCompile group: 'org.junit', name: 'com.springsource.org.junit', version:'4.5.0'
-    testCompile group: 'org.springframework', name: 'org.springframework.test', version:'3.0.4.RELEASE'
+    testCompile group: 'org.springframework', name: 'org.springframework.test', version: springVersion
     testCompile group: 'javax.transaction', name: 'com.springsource.javax.transaction', version:'1.1.0'
     testCompile group: 'org.hibernate', name: 'com.springsource.org.hibernate.annotations', version:'3.4.0.GA'
 
